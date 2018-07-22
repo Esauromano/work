@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "main":"server.js",
+  "author":"J. Esau Romano",
+  "description": "For test ",
+  "dependencies": {
+    "formidable": "latest",
+    "request": "latest"
+  }
+
+}
