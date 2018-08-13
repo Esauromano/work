@@ -1,0 +1,43 @@
+{
+    "Operador":
+    {
+	"RegEx": ".*",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "Correo":
+    {
+	"RegEx": "^$|^[^@]+@[^@]+\\.[^@]+$",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "ProveedorFlete":
+    {
+	"RegEx": "^$|^[A-Za-z0-9]+$",
+	"Type": "INT",
+	"Pattern": "0",
+	"Necessary": "",
+	"Default": ""
+    },
+    "Placas":
+    {
+	"RegEx": "^$|^[A-Za-z0-9]+$",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "Licencia":
+    {
+	"RegEx": "^$|^A$|^B$|^C$|^D$|^E$",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    }
+}
+

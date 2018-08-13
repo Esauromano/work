@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Img/arete_logo.png</file>
+        <file>Img/arms_icon.png</file>
+        <file>Img/arms_logo.png</file>
+        <file>Img/arms_pestana.png</file>
+        <file>Img/cedi.png</file>
+        <file>Img/empresa.png</file>
+        <file>Img/password.png</file>
+        <file>Img/usuario.png</file>
+        <file>Img/arms_fondo.png</file>
+        <file>Img/g_arete_white.png</file>
+        <file>Img/arete_group.png</file>
+    </qresource>
+</RCC>

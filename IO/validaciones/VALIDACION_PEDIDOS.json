@@ -1,0 +1,147 @@
+{
+    "Pedido":
+    {
+	"RegEx": ".+",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "CEDI":
+    {
+	"RegEx": ".*",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "DestinoTR1":
+    {
+	"RegEx": ".+",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "TipoPedido":
+    {
+	"RegEx": ".*",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "Volumen":
+    {
+	"RegEx": "^\\d+\\.?[0-9]{0,10}$",
+	"Type": "FLOAT",
+	"Pattern": "{:,.4f}",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "Peso":
+    {
+	"RegEx": "^\\d+\\.?[0-9]{0,10}$",
+	"Type": "FLOAT",
+	"Pattern": "{:,.4f}",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "Valor":
+    {
+	"RegEx": "\\d+\\.[0-9]{1,2}",
+	"Type": "FLOAT",
+	"Pattern": "{:,.2f}",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "Piezas":
+    {
+	"RegEx": "\\d+\\.[0-9]{0,10}",
+	"Type": "INT",
+	"Pattern": "0",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "VentanaFechaInicioPedido":
+    {
+	"RegEx": "^[0-3][0-9]/[0-1][0-9]/[0-9][0-9][0-9][0-9]$",
+	"Type": "DATETIME",
+	"Pattern": "%d/%m/%Y",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "VentanaFechaFinPedido":
+    {
+	"RegEx": "^[0-3][0-9]/[0-1][0-9]/[0-9][0-9][0-9][0-9]$",
+	"Type": "DATETIME",
+	"Pattern": "%d/%m/%Y",
+	"Necessary": "True",
+	"Default": ""
+    },
+    "VentanaHoraInicioPedido":
+    {
+	"RegEx": "^[01]?[0-9]:[0-5][0-9]$|^2[0-3]:[0-5][0-9]$",
+	"Type": "DATETIME",
+	"Pattern": "%H:%M",
+	"Necessary": "True",
+	"Default": "0:00"
+    },
+    "VentanaHoraFinPedido":
+    {
+	"RegEx": "^[01]?[0-9]:[0-5][0-9]$|^2[0-3]:[0-5][0-9]$",
+	"Type": "DATETIME",
+	"Pattern": "%H:%M",
+	"Necessary": "True",
+	"Default": "23:59"
+    },
+    "TiemDescarga":
+    {
+	"RegEx": "^\\d+$",
+	"Type": "INT",
+	"Pattern": "0",
+	"Necessary": "True",
+	"Default": "30"
+    },
+    "EntregaRecoleccion":
+    {
+	"RegEx": "^$|^Entrega$|^Recolecci.n$",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "Productos":
+    {
+	"RegEx": "^$|^\\d+$",
+	"Type": "INT",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "RecolectaCEDI2":
+    {
+	"RegEx": "^[Ss][ÍIií]$|^[Nn][Oo]$",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "True",
+	"Default": "No"
+    },
+    "DestinoTR2":
+    {
+	"RegEx": ".*",
+	"Type": "STRING",
+	"Pattern": "",
+	"Necessary": "",
+	"Default": ""
+    },
+    "FechaEntregaTR2":
+    {
+	"RegEx": "^$|^[0-3][0-9]/[0-1][0-9]/[0-9][0-9][0-9][0-9]$",
+	"Type": "DATETIME",
+	"Pattern": "%d/%m/%Y",
+	"Necessary": "",
+	"Default": ""
+    }
+    
+}

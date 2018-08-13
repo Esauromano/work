@@ -1,0 +1,24 @@
+- Todos los métodos deben tener try/except con el siguiente formato
+Ejemplo
+
+    try:
+        print ("Ejemplo")
+    except Exception as e:
+        file_name = os.path.basename(sys.argv[0])
+        this_function_name = sys._getframe().f_code.co_name
+        error = '{} - {} - {}'.format(file_name,this_function_name,str(e))
+        return False, error, False
+
+- Todos los métodos deben regresar 3 parámetros ok, duracion, resultado
+Ejemplo
+
+    start_time = datetime.now()
+    try:
+        resultado = "Ejemplo"
+    except Exception as e:
+        file_name = os.path.basename(sys.argv[0])
+        this_function_name = sys._getframe().f_code.co_name
+        error = '{} - {} - {}'.format(file_name,this_function_name,str(e))
+        return False, error, False
+    duracion = datetime.now() - start_time
+    return True, duracion, resultado

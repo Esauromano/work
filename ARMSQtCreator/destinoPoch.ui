@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ARMSApp</class>
+ <widget class="QMainWindow" name="ARMSApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1906</width>
+    <height>2000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ARMS-Exchange</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow#ARMSApp {
+border-image: url(:/IMG5/3fonodo_3.jpg) 0 0 0 0 stretch stretch;}
+
+
+contentsMargin 0,0,0,0;
+font: 11pt &quot;Arial Narrow&quot;;
+background-color: transparent;
+padding: 3px;
+margin: 2px;
+padding-bottom: 0px;</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1920</width>
+     <height>1200</height>
+    </size>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+border: 0px;
+border-radius: 5px;
+text-align: center;}
+
+QProgressBar::chunk {
+color: white;
+background:rgba(190, 219, 189, 33);
+border:none;
+width: 5px;
+height: 5px;}
+
+QGroupBox{
+color: white;
+background:rgba(190, 219, 189, 33);
+border: none;
+border-radius: 12px;
+padding:6px;}
+
+QLabel{
+color: rgba(190, 219, 189, 255);
+background:transparent;
+border: none;
+font: 12pt &quot;Arial Narrow&quot;;
+border-radius: 12px;
+padding:2px;}
+
+QTableView {
+color: white;
+background:rgba(190, 219, 189, 33);
+border: none;
+border-radius: 12px;
+font: 10pt &quot;Arial Narrow&quot;;
+gridline-color: rgba(190, 219, 189,33);}
+
+QTableView::item:focus {
+color: rgb(135, 171, 141);
+background: white;
+border: none;
+width: 25px;
+height: 25px;}
+
+QTableView::item:selected, QTableView::item:selected:!active {
+color: rgb(173, 197, 113);
+background: white;
+border: none;
+width: 25px;
+height: 25px;}
+
+QTableView QTableCornerButton::section {
+background:transparent;
+border: none;
+}
+
+QTableView QTableCornerButton {
+background:transparent;
+border: none;
+}
+
+QHeaderView::section{
+color: rgba(190, 219, 189,255);;
+background:transparent;
+border: 0px dotted rgba(190, 219, 189, 255);
+text-align: center;
+font: 9pt &quot;Arial Narrow&quot;;
+height: 22px;
+width: 40px;}
+
+
+QTabBar::tab {
+background-color: transparent;
+color: rgb(135, 171, 141);
+padding: 2px;
+font: 13pt &quot;Roboto&quot;;
+width:150px;
+height:17;
+}
+
+QTabWidget::pane { /* The tab widget frame */
+background-color: transparent;
+border:0px;
+margin:0 auto;
+}
+
+
+QTabBar::tab::selected
+{
+color: white;
+}
+
+QPushButton{
+color:  rgb(190, 219, 189);
+background:rgba(190, 219, 189, 75);
+border: 1px solid rgba(190, 219, 189, 33);
+border-radius: 12px;
+width: 200px;
+height: 40px;}
+
+
+QPushButton:pressed{
+color: white;
+background:rgba(190, 219, 189, 88);
+border: 1px solid rgba(190, 219, 189, 33);
+border-radius: 12px;
+width: 200px;
+height: 40px;}
+
+
+QLineEdit{
+color:  rgb(190, 219, 189);
+background:rgba(190, 219, 189, 33);
+border: none;
+border-radius: 12px;
+width: 200px;
+height: 30px;}
+
+QCheckBox::indicator:checked {
+image: url(:/IMG5/checkbox_check.png);}
+QCheckBox::indicator:unchecked {
+image: url(:/IMG5/checkbox_uncheck.png);}
+
+
+QRadioButton::indicator::checked {
+image: url(:/IMG5/radiobutton_check.png);}
+QRadioButton::indicator::unchecked {
+image: url(:/IMG5/radiobutton_uncheck.png);}
+
+QListWidget{
+color: white;
+background:transparent;
+border: none;
+border-radius: 12px;}
+
+
+QListWidget::item:selected {
+color: rgb(190, 219, 189);
+background:transparent;
+border: none;
+}
+
+QComboBox{
+color: white;
+background:rgba(190, 219, 189, 33);
+border: none;
+border-radius: 12px;
+width: 200px;
+height: 30px;}
+
+QComboBox:on
+{
+color: white;
+background:rgba(190, 219, 189, 33);
+border:none;
+border-radius: 12px;
+}
+
+QComboBox::drop-down {
+color: white;
+background:rgba(190, 219, 189, 33);
+border: none;
+border-radius: 12px;}
+
+QComboBox::down-arrow {
+image: url(:/IMG5/3dropdown.png);
+}
+QComboBox::down-arrow:on {
+top: 1px;
+left: 1px;
+}
+QComboBox::item:selected, QTableView::item:selected:!active {
+color: white;
+background:rgba(190, 219, 189, 33);
+}
+QComboBox::item {
+color: white;
+background:rgba(190, 219, 189, 33);
+}
+
+
+
+QScrollBar:horizontal {
+border: 2px rgba(190, 219, 189, 100);
+background:rgba(190, 219, 189, 33);
+height: 15px;
+}
+QScrollBar::handle:horizontal {
+background:rgba(190, 219, 189, 111);
+min-width: 20px;
+}
+QScrollBar:vertical {
+border: 0px solid rgb(68, 92, 53);
+background:rgba(190, 219, 189, 33);
+width: 15px;
+}
+QScrollBar::handle:vertical {
+background:rgba(190, 219, 189, 111);
+min-height: 20px;
+}
+
+
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+width: 3px;
+height: 3px;
+background:rgba(190, 219, 189, 33);
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+background: none;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+border: 0px solid rgb(68, 92, 53);
+width: 3px;
+height: 3px;
+background:rgba(190, 219, 189, 33);
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+
+padding-bottom: 0px;</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_10">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(96,103,125,222);
+color: white;</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_13">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="maximumSize">
+          <size>
+           <width>600</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="labelProgress">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="empreCedi">
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="user">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="version">
+         <property name="maximumSize">
+          <size>
+           <width>80</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget1Principal">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1920</width>
+        <height>1200</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: 0px dotted white;
+    background-color: transparent;
+}
+QTabBar::tab {
+margin: 2px;
+background: rgba(96, 103, 125, 123);
+color: white;
+padding: 5px;
+font: 12pt &quot;Roboto&quot;;
+width:110px;
+height:17px;
+text-alignment: center;
+}
+
+QTabBar::tab::selected
+{
+margin: 2px;
+font-weight: bold;
+background-color: rgba(111,93,104,123);
+text-alignment: center;
+}
+QTabBar::tab::disabled
+{
+margin: 2px;
+font-weight: bold;
+color: transparent;
+background-color: transparent;
+text-alignment: center;
+}
+
+</string>
+      </property>
+      <property name="locale">
+       <locale language="English" country="UnitedStates"/>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>64</width>
+        <height>64</height>
+       </size>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="iniciar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12345</width>
+         <height>12345</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+    border: 1px dotted white;
+    background-color: transparent;
+}
+QTabBar::tab {
+margin: 2px;
+background: rgba(96, 103, 125, 123);
+color: white;
+padding: 5px;
+font: 12pt &quot;Roboto&quot;;
+width:110px;
+height:17px;
+text-alignment: center;
+}
+
+QTabBar::tab::selected
+{
+margin: 2px;
+font-weight: bold;
+background-color: rgba(111,93,104,123);
+text-alignment: center;
+}
+QTabBar::tab::disabled
+{
+margin: 2px;
+font-weight: bold;
+color: transparent;
+background-color: transparent;
+text-alignment: center;
+}
+
+</string>
+       </property>
+       <attribute name="title">
+        <string>Iniciar</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_42">
+        <item row="0" column="0">
+         <widget class="QFrame" name="frame">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="frame_48">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>520</width>
+               <height>600</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px dotted white;
+background:rgba(96,103,125,222);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background:transparent;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>IMG5/3logo_iniciosesion.png</pixmap>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="editCEDI_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+background:rgba(255,255,255,123);
+border: none;
+padding-left:5px;
+color: black;
+font: 12pt &quot;Roboto&quot;;
+margin: 2px;
+width: 200px;
+height: 30px;}
+</string>
+                </property>
+                <property name="text">
+                 <string>CENADI</string>
+                </property>
+                <property name="placeholderText">
+                 <string>CEDI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="editUsuario_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+background:rgba(255,255,255,123);
+border: none;
+padding-left:5px;
+color: black;
+font: 12pt &quot;Roboto&quot;;
+margin: 2px;
+width: 200px;
+height: 30px;}
+</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Usuario</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="editClave_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+background:rgba(255,255,255,123);
+border: none;
+padding-left:5px;
+color: black;
+font: 12pt &quot;Roboto&quot;;
+margin: 2px;
+width: 200px;
+height: 30px;}
+</string>
+                </property>
+                <property name="echoMode">
+                 <enum>QLineEdit::Password</enum>
+                </property>
+                <property name="placeholderText">
+                 <string>Clave</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="btnLogin_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>12345</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="palette">
+                 <palette>
+                  <active>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </active>
+                  <inactive>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </inactive>
+                  <disabled>
+                   <colorrole role="WindowText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Button">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Text">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="ButtonText">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="255">
+                      <red>255</red>
+                      <green>255</green>
+                      <blue>255</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Base">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                   <colorrole role="Window">
+                    <brush brushstyle="SolidPattern">
+                     <color alpha="133">
+                      <red>150</red>
+                      <green>133</green>
+                      <blue>143</blue>
+                     </color>
+                    </brush>
+                   </colorrole>
+                  </disabled>
+                 </palette>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                </property>
+                <property name="text">
+                 <string>INICIAR</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Areté</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>425</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="logo_footer_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>420</width>
+            <height>420</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>420</width>
+            <height>420</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;
+</string>
+          </property>
+          <property name="pixmap">
+           <pixmap>IMG5/3logo_iniciosesion_2.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>455</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QLabel" name="logo_footer">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>12345</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 17PT &quot;Roboto&quot;;
+color:white;
+background:transparent;
+
+</string>
+          </property>
+          <property name="text">
+           <string>A R M S</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="interfaz">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12345</width>
+         <height>12345</height>
+        </size>
+       </property>
+       <attribute name="title">
+        <string>Generar SS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_29">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">background:transparent;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_20">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>12345</width>
+               <height>12345</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background:transparent;</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QFrame" name="frame_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>150</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background:transparent;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="0">
+                  <widget class="QRadioButton" name="radioButtonInterfasePochtecaPedidos">
+                   <property name="styleSheet">
+                    <string notr="true">color:white;</string>
+                   </property>
+                   <property name="text">
+                    <string>Pedidos</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QPushButton" name="btnFiltroFechas">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                   </property>
+                   <property name="text">
+                    <string>Buscar</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QRadioButton" name="radioButtonInterfasePochtecaOperadores">
+                   <property name="styleSheet">
+                    <string notr="true">color:white;</string>
+                   </property>
+                   <property name="text">
+                    <string>Operadores</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QFrame" name="frame_27">
+                   <property name="minimumSize">
+                    <size>
+                     <width>150</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background:transparent; margin-top:0px;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_12">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="verticalSpacing">
+                     <number>-1</number>
+                    </property>
+                    <item row="1" column="0">
+                     <widget class="QCheckBox" name="filtrarFechas">
+                      <property name="styleSheet">
+                       <string notr="true">color:white;</string>
+                      </property>
+                      <property name="text">
+                       <string>Seleccione aqui para filtar por fecha</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QDateEdit" name="dateEditPochteca">
+                      <property name="styleSheet">
+                       <string notr="true">font: 16px;
+color: rgb(255,255,255);
+border: 0px solid rgba(143, 234, 79,90);
+background-color: rgb(70,70,70);</string>
+                      </property>
+                      <property name="locale">
+                       <locale language="Spanish" country="Mexico"/>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="calendarPopup">
+                       <bool>true</bool>
+                      </property>
+                      <property name="date">
+                       <date>
+                        <year>2089</year>
+                        <month>1</month>
+                        <day>1</day>
+                       </date>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QFrame" name="frame_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>183</height>
+                    </size>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">margin-left:0px;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_14">
+                    <item row="0" column="0">
+                     <widget class="QRadioButton" name="radioButtonInterfasePochtecaTodos">
+                      <property name="styleSheet">
+                       <string notr="true">color:white; padding-left:0px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Todos</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QRadioButton" name="radioButtonInterfasePochtecaCancelados">
+                      <property name="styleSheet">
+                       <string notr="true">color:white; padding-left:0px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Cancelados</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QRadioButton" name="radioButtonInterfasePochtecaOrdinarios">
+                      <property name="styleSheet">
+                       <string notr="true">color:white; padding-left:0px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Ordinarios</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QRadioButton" name="radioButtonInterfasePochtecaUrgentes">
+                      <property name="styleSheet">
+                       <string notr="true">color:white; padding-left:0px;</string>
+                      </property>
+                      <property name="text">
+                       <string>Urgentes</string>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="1" colspan="2">
+               <widget class="QPushButton" name="pushButtonInterfasePochtecaGenera">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>12345</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                </property>
+                <property name="text">
+                 <string>Generar desde el FTP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2" rowspan="2">
+               <widget class="QListWidget" name="listWidgetPochtecaFTP">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>500</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QListWidget{
+color: white;
+background:transparent;
+font: 12pt &quot;Roboto&quot;;
+border: 0.5px dotted white;
+border-radius: 0px;
+}
+
+QListWidget::item:selected {
+font: 12pt &quot;Roboto&quot;;
+color: white;
+background:rgb(111,93,104,222);
+border: none;
+}
+
+</string>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="currentRow">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Archivo AA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo BB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo CC</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="abrirLocal">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                </property>
+                <property name="text">
+                 <string>Generar desde archivo local</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_21">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>12345</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background:transparent;</string>
+             </property>
+             <property name="title">
+              <string>SpreadSheets generados</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_22">
+              <property name="leftMargin">
+               <number>20</number>
+              </property>
+              <property name="topMargin">
+               <number>25</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0" colspan="2">
+               <widget class="QListWidget" name="listWidgetPochtecaHistorial">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QListWidget{
+color: white;
+background:transparent;
+font: 12pt &quot;Roboto&quot;;
+border: 0.5px dotted white;
+border-radius: 0px;
+}
+
+QListWidget::item:selected {
+font: 12pt &quot;Roboto&quot;;
+color: white;
+background:rgb(111,93,104,222);
+border: none;
+}
+
+</string>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="currentRow">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Archivo AA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo BB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo CC</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="DestinosFTP">
+       <attribute name="title">
+        <string>Destinos FTP</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="minimumSize">
+           <size>
+            <width>800</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background:transparent;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="groupBox_23">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>12345</width>
+               <height>12345</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background:transparent;</string>
+             </property>
+             <property name="title">
+              <string>Destinos en el FTP</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QListWidget" name="listDestinos">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>500</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QListWidget{
+color: white;
+background:transparent;
+font: 12pt &quot;Roboto&quot;;
+border: 0.5px dotted white;
+border-radius: 0px;
+}
+
+QListWidget::item:selected {
+font: 12pt &quot;Roboto&quot;;
+color: white;
+background:rgb(111,93,104,222);
+border: none;
+}
+
+</string>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_4">
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QPushButton" name="btnSyncDestinos">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>12345</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                   </property>
+                   <property name="text">
+                    <string>Sincronizar archivo seleccionado</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="abrirLocal_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+                   </property>
+                   <property name="text">
+                    <string>Destinos desde archivo local</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_22">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>12345</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background:transparent;</string>
+             </property>
+             <property name="title">
+              <string>Coordenadas encontradas</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QListWidget" name="tablePochtecaLatLong">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QListWidget{
+color: white;
+background:transparent;
+font: 12pt &quot;Roboto&quot;;
+border: 0.5px dotted white;
+border-radius: 0px;
+}
+
+QListWidget::item:selected {
+font: 12pt &quot;Roboto&quot;;
+color: white;
+background:rgb(111,93,104,222);
+border: none;
+}
+
+</string>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="currentRow">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Archivo AA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo BB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo CC</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">color:white;</string>
+                </property>
+                <property name="text">
+                 <string>Coordenadas no encontradas, corregir texto</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QListWidget" name="tablePochtecaLatLong_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QListWidget{
+color: white;
+background:transparent;
+font: 12pt &quot;Roboto&quot;;
+border: 0.5px dotted white;
+border-radius: 0px;
+}
+
+QListWidget::item:selected {
+font: 12pt &quot;Roboto&quot;;
+color: white;
+background:rgb(111,93,104,222);
+border: none;
+}
+
+</string>
+                </property>
+                <property name="verticalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="horizontalScrollBarPolicy">
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                </property>
+                <property name="currentRow">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Archivo AA</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo BB</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Archivo CC</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="DestinosDB">
+       <attribute name="title">
+        <string>Destinos DB</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_15">
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>500</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+color: white;
+background: rgba(96, 103, 125, 222);
+font: 11pt &quot;Roboto&quot;;
+border: 1px dotted white;
+gridline-color: rgb(187,203,209);
+}
+
+QTableWidget::item:selected:active {
+background: white;
+color:black;
+padding:0px;
+margin:0px;
+width: 25px;
+height: 25px;
+}
+
+
+QLineEdit{
+font: 11pt &quot;Roboto&quot;;
+color:  white;
+background:rgba(255,255,255,222);
+border: none;
+border-radius: 0px;
+padding:0px;
+margin:0px;
+}
+
+QScrollBar:horizontal {
+border: 0px;
+background:rgba(188,188,188,255);
+height: 7px;
+}
+
+QScrollBar::handle:horizontal {
+background:rgba(96,103,125,88);
+min-width: 7px;
+}
+
+QScrollBar:vertical {
+border: 0px;
+background:rgba(188,188,188,255);
+width: 7px;
+}
+
+QScrollBar::handle:vertical {
+background:rgba(96,103,125,88);
+min-height: 7px;
+}
+
+
+QHeaderView::section{
+font: 9pt &quot;Roboto&quot;;
+color: white;
+background: rgba(96, 103, 125, 222);
+align: center;
+height: 22px;
+width: 40px;
+qproperty-alignment: AlignCenter;
+gridline-color: rgba(187,203,209,222);
+border: 0.5px dotted rgb(187,203,222);
+}
+
+QTableWidget QTableCornerButton::section {
+background: rgba(96, 103, 125, 222);
+gridline-color: rgba(187,203,209,222);
+}
+
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="mapFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>800</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(173, 197, 113, 255);
+background: transparent;
+border: 2px solid rgba(255, 0, 0, 255);
+font: 15pt &quot;Arial Narrow&quot;;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="cargarDestinosDB">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+              </property>
+              <property name="text">
+               <string>Recargar destinos</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="mandarDestinosDB">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+font:11pt &quot;Roboto&quot;;
+background:rgba(150, 133, 143, 133);
+margin: 5px;
+color:  rgb(255,255,255);
+border: 1px solid rgb(150, 133, 143);
+border-radius: 5px;
+width: 200px;
+height: 40px;}
+
+
+
+QPushButton:pressed{
+font: 11pt &quot;Roboto&quot;;
+margin: 5px;
+color: rgb(255,255,255);
+background:rgba(198,168,184,222);
+border: 0px solid rgba(190, 219, 189, 33);
+border-radius: 5px;
+width: 200px;
+height: 40px;}</string>
+              </property>
+              <property name="text">
+               <string>Mandar a base de datos</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../../mezclaVALI/armsapp/ARMSQtCreator/img5.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>slot_btnRecalculaPlan()</slot>
+  <slot>slot_btnOptimizaPlan()</slot>
+  <slot>slot_btnColorVPlan()</slot>
+  <slot>slot_btnColorDPlan()</slot>
+  <slot>slot_btnColorSinPlan()</slot>
+  <slot>slot_btnSeleccVPlan()</slot>
+  <slot>slot_btnSeleccDPlan()</slot>
+  <slot>slot_comboNombrePlan()</slot>
+  <slot>slot_btnGuardaPlan()</slot>
+  <slot>slot_btnPropagaPlan()</slot>
+  <slot>slot_btnRefreshPlan()</slot>
+  <slot>slot_btnPropagaAuto()</slot>
+  <slot>slot_btnGuardaAuto()</slot>
+  <slot>slot_btnRecalculaManual()</slot>
+  <slot>slot_btnOptimizaManual()</slot>
+  <slot>slot_btnColorVManual()</slot>
+  <slot>slot_btnColorDManual()</slot>
+  <slot>slot_btnColorSinManual()</slot>
+  <slot>slot_btnSeleccVManual()</slot>
+  <slot>slot_btnSeleccDManual()</slot>
+  <slot>slot_btnRefreshManual()</slot>
+  <slot>slot_btnPropagaManual()</slot>
+  <slot>slot_btnGuardaManual()</slot>
+  <slot>slot_editMaxM3ManualV1()</slot>
+  <slot>slot_editMaxKgManualV1()</slot>
+  <slot>slot_editMaxValorManualV1()</slot>
+  <slot>slot_editTipoVehManualV1()</slot>
+  <slot>slot_editNumViajeManualV1()</slot>
+  <slot>slot_editMaxValorManualV2()</slot>
+  <slot>slot_editMaxM3ManualV2()</slot>
+  <slot>slot_editMaxKgManualV2()</slot>
+  <slot>slot_editTipoVehManualV2()</slot>
+  <slot>slot_editNumViajeManualV2()</slot>
+  <slot>slot_btnRecalculaV1()</slot>
+  <slot>slot_btnOptimizaV1()</slot>
+  <slot>slot_btnColorVV1()</slot>
+  <slot>slot_btnColorDV1()</slot>
+  <slot>slot_btnColorSinV1()</slot>
+  <slot>slot_btnOtroV1()</slot>
+  <slot>slot_btnXGV1()</slot>
+  <slot>slot_btnGV1()</slot>
+  <slot>slot_btnMV1()</slot>
+  <slot>slot_btnCHV1()</slot>
+  <slot>slot_btnLimpiaV1()</slot>
+  <slot>slot_btnRegresaV1()</slot>
+  <slot>slot_btnRecalculaV2()</slot>
+  <slot>slot_btnOptimizaV2()</slot>
+  <slot>slot_btnColorVV2()</slot>
+  <slot>slot_btnColorDV2()</slot>
+  <slot>slot_btnColorSinV2()</slot>
+  <slot>slot_btnOtroV2()</slot>
+  <slot>slot_btnXGV2()</slot>
+  <slot>slot_btnGV2()</slot>
+  <slot>slot_btnMV2()</slot>
+  <slot>slot_btnCHV2()</slot>
+  <slot>slot_btnLimpiaV2()</slot>
+  <slot>slot_btnRegresaV2()</slot>
+  <slot>slot_btnPropagaAsignar()</slot>
+  <slot>slot_btnGuardaAsignar()</slot>
+  <slot>slot_btnAbrirVehAsignar()</slot>
+  <slot>slot_btnAbrirOperadoresAsignar()</slot>
+  <slot>slot_btnAbrirVehPredespegueAsignar()</slot>
+  <slot>slot_btnAbrirOperadoresPredespegueAsignar()</slot>
+  <slot>slot_btnPredespegaSeleccionados()</slot>
+  <slot>slot_btnPredespegaPlan()</slot>
+  <slot>slot_btnRefreshAuto()</slot>
+  <slot>slot_btnRefreshAsignar()</slot>
+  <slot>slot_editCEDI()</slot>
+  <slot>slot_editUsuario()</slot>
+  <slot>slot_editClave()</slot>
+  <slot>slot_btnLogin()</slot>
+  <slot>slot_btnGuardaConfiguracion()</slot>
+  <slot>slot_btnGenerarPlan()</slot>
+  <slot>slot_bntAbrirPlan()</slot>
+  <slot>slot_listPedidos()</slot>
+  <slot>slot_listVeh()</slot>
+  <slot>slot_listOperadores()</slot>
+  <slot>slot_listDestinos()</slot>
+  <slot>slot_listTarifario()</slot>
+  <slot>slot_listPreferencias()</slot>
+  <slot>slot_listCompatibilidad()</slot>
+  <slot>slot_listPlanes()</slot>
+  <slot>slot_listdblClickPlanes()</slot>
+  <slot>slot_listPedidosAnadir()</slot>
+  <slot>slot_listPredespegadosAnadir()</slot>
+  <slot>slot_btnAnadirPedidos()</slot>
+  <slot>slot_btnBorrarPedidos()</slot>
+  <slot>slot_btnAnadirPredespegados()</slot>
+  <slot>slot_btnMotorIniciar()</slot>
+  <slot>slot_btnOptimizar()</slot>
+  <slot>slot_btnOptimizarViajes()</slot>
+  <slot>slot_editOcupacion()</slot>
+  <slot>slot_editCercania()</slot>
+  <slot>slot_editAumentarValor()</slot>
+  <slot>slot_editAumentarVentana()</slot>
+  <slot>slot_editAumentarVol()</slot>
+  <slot>slot_editAumentarKg()</slot>
+  <slot>slot_checkIgnoraAcceso()</slot>
+  <slot>slot_checkIgnoraComp()</slot>
+  <slot>slot_radioOptimizaVacios()</slot>
+  <slot>slot_radioOptimizaCercanos()</slot>
+  <slot>slot_comboVehAsignar()</slot>
+  <slot>slot_comboOperadoresAsignar()</slot>
+  <slot>slot_btnAbreVehAsignar()</slot>
+  <slot>slot_btnAbreOperadoresAsignar()</slot>
+  <slot>slot_btnAutomaticoAsignar()</slot>
+  <slot>slot_btnAbreVehAsignarPredespegue()</slot>
+  <slot>slot_btnAbreOperadoresAsignarPredespegue()</slot>
+  <slot>slot_comboVehAsignarPredespegue()</slot>
+  <slot>slot_comboOperadoresAsignarPredespegue()</slot>
+  <slot>slot_btnDespegar()</slot>
+  <slot>slot_gridConfiguracionCurrentCellChanged()</slot>
+  <slot>slot_listAbrePlanItemActivated()</slot>
+  <slot>slot_btnAbrirPlan()</slot>
+  <slot>slot_editNombrePlanGenera()</slot>
+  <slot>slot_gridElPlanCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarPlanCurrentCellChanged()</slot>
+  <slot>slot_gridCalibracionCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarPredespegueCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarVehPlanCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarVehPredespegueCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarOperadoresPlanCurrentCellChanged()</slot>
+  <slot>slot_gridAsignarOperadoresPredespegueCurrentCellChanged()</slot>
+  <slot>slot_gridPredespegarCurrentCellChanged()</slot>
+  <slot>slot_gridDespegarCurrentCellChanged()</slot>
+  <slot>slot_gridDespegadosCurrentCellChanged()</slot>
+  <slot>slot_tabWidgetPrincipalCurrentChange()</slot>
+  <slot>slot_btnMotorDetener()</slot>
+  <slot>slot_btnVerResultado()</slot>
+  <slot>slot_btnCargaPlanAbiertoAsignar()</slot>
+  <slot>slot_btnCargaPlanAbiertoManual()</slot>
+  <slot>slot_btnOptimizaViajesAuto()</slot>
+  <slot>slot_btnAsignarActualizaPredespegue()</slot>
+  <slot>slot_btnCargaPlanPredespegue()</slot>
+  <slot>slot_btnCargaPlanAutomatico()</slot>
+  <slot>slot_btnCargarPredespegados()</slot>
+  <slot>slot_btnCargarDespegados()</slot>
+  <slot>slot_btnAsignarCargarPredespegue()</slot>
+ </slots>
+</ui>
